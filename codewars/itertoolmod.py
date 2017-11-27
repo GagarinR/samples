@@ -17,7 +17,7 @@ def password_cracker222(hash):
              b'u', b'v', b'w', b'x', b'y', b'z']
     
     for c1 in islice(arr, 0, 26):
-       for c2 in islice(arr, 0, 26):
+        for c2 in islice(arr, 0, 26):
             for c3 in islice(arr, 0, 26):
                 for c4 in islice(arr, 0, 26):
                     for c5 in islice(arr, 0, 26):
