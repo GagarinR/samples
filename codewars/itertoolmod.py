@@ -15,47 +15,37 @@ def password_cracker222(hash):
     arr = [b'a', b'b', b'c', b'd', b'e', b'f', b'g', b'h', b'i', b'j',
              b'k', b'l', b'm', b'n', b'o', b'p', b'q', b'r', b's', b't',
              b'u', b'v', b'w', b'x', b'y', b'z']
-    # arraz = 'abcdefghijklmnopqrstuvwxyz'
-    # arr = [i.encode('utf-8') for i in arraz]
-
+    
     for c1 in islice(arr, 0, 26):
        for c2 in islice(arr, 0, 26):
             for c3 in islice(arr, 0, 26):
                 for c4 in islice(arr, 0, 26):
                     for c5 in islice(arr, 0, 26):
-                        # print (i2)
-                        # if i2 == 0:
-                            # print (i)
+                        
                             if hashlib.sha1(c5).hexdigest() == hash:
                                 end_time = time.time()
                                 print(end_time - start_time)
                                 return c5.decode()
-                        # if i2 == 1:
-                            # print (current+i)
+                        
                             if hashlib.sha1(c4 + c5).hexdigest() == hash:
                                 end_time = time.time()
                                 print(end_time - start_time)
                                 return (c4 +c5).decode()
-                        # if i2 >= 0:
-                            # print(cur+ current + i)
+                        
                             if hashlib.sha1(c3+ c4 + c5).hexdigest() == hash:
                                 end_time = time.time()
                                 print(end_time - start_time)
                                 return (c3+ c4 + c5).decode()
-                        # if i2 >= 0:
-                             # print(cu+ cur+ current + i)
-
+                        
                             if hashlib.sha1(c2+ c3+ c4 + c5).hexdigest() == hash:
                                 end_time = time.time()
                                 print(end_time - start_time)
                                 return (c2+ c3+ c4 + c5).decode()
-                        # if i2 >= 0:
-                            # print(c+ cu+cur+ current + i)
+                       
                             if hashlib.sha1(c1+c2+ c3+ c4 + c5).hexdigest() == hash:
                                 end_time = time.time()
                                 print(end_time - start_time)
                                 return (c1+c2+ c3+ c4 + c5).decode()
-
 
     return ''
     
