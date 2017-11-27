@@ -18,7 +18,7 @@ def password_cracker222(hash):
     # arraz = 'abcdefghijklmnopqrstuvwxyz'
     # arr = [i.encode('utf-8') for i in arraz]
 
-    for i2,c in enumerate(islice(arr, 0, 26)):
+    for c in (islice(arr, 0, 26):
        for cu in islice(arr, 0, 26):
             for cur in islice(arr, 0, 26):
                 for current in islice(arr, 0, 26):
