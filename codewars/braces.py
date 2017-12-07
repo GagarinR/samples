@@ -1,4 +1,4 @@
-import sys
+
 s1 = "(){}[]"
 s2 = "([{}])"
 s3 = "(}"
@@ -10,11 +10,7 @@ def validBraces(string):
     for i in range(len(string)-1):
         braces = string[i]+ string[i+1]
         if braces in lst:
-               validBraces(string[:i]+string[i+2:])
-    if len(string) == 0:
-        print("True")
-        # return True
-        sys.exit()
-    return False
+              return validBraces(string[:i]+string[i+2:])
+    return not string
 
 print (validBraces(s5))
