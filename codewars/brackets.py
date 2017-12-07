@@ -40,7 +40,7 @@ def braces_check(s):
             indexes_of_open_and_closing.append(index)
 
     if len(indexes_of_open_and_closing) != len(s): # in case we have one bracket which doesn't have a pair, this would be unequal
-        return s, False
+        return s, False, "Looks like we have some lonely bracket which doesn't have a pair :'( "
     # print(lst_s)
     return s, True
 print(braces_check(s1))
@@ -50,3 +50,4 @@ print(braces_check(s4))
 print(braces_check(s5))
 print(braces_check(")"))
 print(braces_check(""))
+print(braces_check("()(((){})"))
