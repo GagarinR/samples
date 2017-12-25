@@ -1,0 +1,18 @@
+def chess_board_cell_color(cell1, cell2):
+    c = lambda x: x.replace('A','1').replace('B','2').replace('C','3').replace('D','4').replace('E','5').replace('F','6').replace('G','7').replace('H','8')
+
+    print  cell1, cell2
+    print c(cell1), c(cell2)
+
+    f1 = sum([int(i) for i in list(c(cell1))])%2 == 0
+    f2 = sum([int(i) for i in list(c(cell2))]) % 2 == 0
+
+    # print f1,f2
+
+
+    return f1 == f2 
+    
+    # return with True/False args doesnt work here!
+    # return sum([int(i) for i in list(c(cell1))])%2 == 0 == sum([int(i) for i in list(c(cell2))]) % 2 == 0
+
+print chess_board_cell_color('C8','E4') # True
