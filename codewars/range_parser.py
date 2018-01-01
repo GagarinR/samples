@@ -22,3 +22,22 @@ def range_parser(string):
 
 
 range_parser(s)
+
+
+
+
+##################################
+def range_parser(s):
+    b,c =[],[]
+    for i in s.split(','):
+        if i.count('-')==0:b.append(i+'-'+i+':1')
+
+        else:
+            if i.count(':')==0:b.append(i+':1')
+            else:b.append(i)
+    for i in b:
+        t = (i.split(':'))
+        t2 = (t[0].split('-'))
+        for i2 in range(int(t2[0]),int(t2[1])+1, int(t[1])):
+            c.append(i2)
+    return c
