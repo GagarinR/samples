@@ -13,9 +13,6 @@ def password_cracker(hash):
 
                     #print c, cu, cur, current, i
                     for i in arraz:
-
-
-                        
                         if hashlib.sha1(i.encode('utf-8')).hexdigest() == hash:
                                 return str(i)
 

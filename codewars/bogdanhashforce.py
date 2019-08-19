@@ -57,4 +57,4 @@ def password_cracker(hash=shakey):
                         fifth_letter
                         if hashlib.sha1(word).hexdigest() == hash:
                             return word.decode()
-print(password_cracker(aaabc_hash))
+print(password_cracker(zzz_hash))
